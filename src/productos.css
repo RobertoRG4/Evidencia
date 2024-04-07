@@ -1,0 +1,161 @@
+.titulo-principal {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 40px;
+  margin-bottom: 50px;
+  align-items: center;
+  text-align: center;
+}
+
+.azul {
+  background-color: #dcedf5 !important;
+}
+.grid-articulos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.articulo {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.articulo img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.articulo h2 {
+  font-size: 20px;
+  margin-top: 0;
+}
+
+.articulo p {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.articulo .precio {
+  font-weight: bold;
+}
+
+.articulo .talla {
+  color: #999;
+}
+
+.articulo .color {
+  color: #666;
+}
+
+.articulo a {
+  text-decoration: none;
+}
+
+.articulo:hover {
+  transition: 0.25s;
+  background-color: #f5f5f5;
+}
+.articulo button {
+  background-color: #49a0c8;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 25px;
+}
+.articulo button:hover {
+  transition: 0.5s;
+  background-color: #79abbc;
+}
+#add:hover {
+  color: #fff;
+  padding: 15px;
+  border-radius: 20%;
+  transition: 0.4s;
+  background-color: #b1afaf;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  width: 50px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  float: right;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: fit-content;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.form-container p {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.form-container label {
+  flex: 0 0 30%;
+  font-weight: bold;
+}
+
+.form-container input {
+  flex: 1 1 auto;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.form-buttons {
+  margin: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-buttons button {
+  background-color: #49a0c8;
+  color: #fff;
+}
+
+.form-buttons button:hover {
+  transition: 0.5s;
+  background-color: #79abbc;
+}
