@@ -11,47 +11,6 @@
 <body>
   <?php include ("./componets/navbar.php") ?>
   <main class="container">
-    <div class="titulo-principal">
-      <h1 class="titulo-principal">Productos</h1>
-      <i class="fa-solid fa-plus" id="add"></i>
-    </div>
-
-    <!-- The Modal -->
-    <div class="modal" id="form">
-      <div class="modal-content">
-        <div>
-          <h3 class="titulo-principal">Agregar nuevos productos</h3>
-          <div id="form" class="form-container">
-            <p>
-              <label for="titulo">Título:</label>
-              <input type="text" id="titulo" required />
-            </p>
-            <p>
-              <label for="precio">Precio:</label>
-              <input type="text" id="precio" required />
-            </p>
-            <p>
-              <label for="talla">Talla:</label>
-              <input type="text" id="talla" required />
-            </p>
-            <p>
-              <label for="color">Color:</label>
-              <input type="text" id="color" required />
-            </p>
-            <p>
-              <label for="imagen">Imagen:</label>
-              <input type="text" id="imagen" required />
-            </p>
-          </div>
-
-          <div class="form-buttons">
-            <button id="close" class="button">Cerrar</button>
-            <button id="enviar" class="button">Enviar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <section class="grid-articulos" id="root"></section>
   </main>
   <?php include ("./componets/footer.php") ?>
