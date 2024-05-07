@@ -45,24 +45,29 @@ function eliminar_producto($id)
 {
     global $db;
 
-    // Usar una consulta preparada para prevenir inyección SQL
-    $sql = "DELETE FROM productos WHERE id = ?";
-
-    // Preparar la consulta
-    if ($stmt = mysqli_prepare($db, $sql)) {
-        // Vincular el parámetro
-        mysqli_stmt_bind_param($stmt, 'i', $id);
-
-        // Ejecutar la consulta
-        $resultado = mysqli_stmt_execute($stmt);
-
-        // Cerrar la declaración
-        mysqli_stmt_close($stmt);
-
-        // Devolver el resultado de la ejecución
-        return $resultado;
-    } else {
-        // Si falla la preparación, devolver false
-        return false;
+    if (!is_numeric($id)) {
+        throw new InvalidArgumentException("El ID debe ser un número válido.");
     }
+
+    $id = (int) $id;
+
+    $sql_delete_imagenes = "DELETE FROM imagenes WHERE producto_id = $id";
+    if (!mysqli_query($db, $sql_delete_imagenes)) {
+        throw new Exception("Error al eliminar imágenes: " . mysqli_error($db));
+    }
+    $sql_delete_producto = "DELETE FROM productos WHERE id = $id";
+    if (!mysqli_query($db, $sql_delete_producto)) {
+        throw new Exception("Error al eliminar producto: " . mysqli_error($db));
+    }
+
+    return true;
+}
+function nuevo_producto($nombre, $precio, $talla, $color, $imagen, $id)
+{
+    global $db;
+    $sql = "
+    INSERT INTO productos(nombre,precio) VALUES ('$nombre',$precio);
+    INSERT INTO tallas(talla)Values('$talla');
+    Insert Into imagenes(producto_id,url) VALUES($id,'$imagen');";
+    return mysqli_query($db, $sql);
 }

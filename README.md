@@ -1,6 +1,6 @@
 # Evidencia
 
-Crear base de datos 'Round Wear'
+Crear base de datos 'Round Wear' - 'Productos'
 
 ```sql
 -- Crear una base de datos llamada "RoundWear"

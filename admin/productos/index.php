@@ -3,9 +3,14 @@ require ("../private/init.php");
 include (SHARED_PATH . 'header.php');
 $productos = todo_de_tabla('productos');
 ?>
-<div class="container text-center">
-    <h1>Productos</h1>
-    <table class="table m-4">
+<div class="container ">
+    <h1 class="p-4 text-white bg-info text-center">Productos</h1>
+    <div class="d-flex justify-content-between">
+        <a class="btn btn-primary" href="../index.php" role="button">Regresar</a>
+        <a class="btn btn-success" href="./create.php" role="button">Agregar </a>
+    </div>
+
+    <table class=" table m-4">
         <thead>
             <tr>
                 <th scope="col">#</th>
