@@ -44,6 +44,25 @@ function actualizar_producto($id, $nuevo_nombre)
 function eliminar_producto($id)
 {
     global $db;
-    $sql = "DELETE FROM productos WHERE id = '$id'";
-    return mysqli_query($db, $sql);
+
+    // Usar una consulta preparada para prevenir inyección SQL
+    $sql = "DELETE FROM productos WHERE id = ?";
+
+    // Preparar la consulta
+    if ($stmt = mysqli_prepare($db, $sql)) {
+        // Vincular el parámetro
+        mysqli_stmt_bind_param($stmt, 'i', $id);
+
+        // Ejecutar la consulta
+        $resultado = mysqli_stmt_execute($stmt);
+
+        // Cerrar la declaración
+        mysqli_stmt_close($stmt);
+
+        // Devolver el resultado de la ejecución
+        return $resultado;
+    } else {
+        // Si falla la preparación, devolver false
+        return false;
+    }
 }
