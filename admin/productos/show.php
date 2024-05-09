@@ -6,6 +6,9 @@ $imagen_url = get_imagen_producto($id);
 
 $talla_result = get_talla('tallas', $id);
 $talla = ($talla_result) ? mysqli_fetch_assoc($talla_result)['talla'] : 'Desconocido';
+
+$color_result = get_color('colores', $id);
+$color = ($color_result) ? mysqli_fetch_assoc($color_result)['color'] : 'Desconocido';
 include (SHARED_PATH . 'header.php');
 ?>
 
@@ -25,6 +28,7 @@ include (SHARED_PATH . 'header.php');
             <p class="fs-4"><b>Nombre: </b><?= $producto['nombre'] ?></p>
             <p class="fs-4"><b>Precio: </b><?= $producto['precio'] ?></p>
             <p class="fs-4"><b>Talla: </b><?= $talla ?></p>
+            <p class="fs-4"><b>Color: </b><?= $color ?></p>
         </div>
     </div>
 

@@ -26,10 +26,10 @@ $productos = todo_de_tabla('productos');
             <?php while ($row = $productos->fetch_assoc()) { ?>
                 <?php
 
-                $talla_result = get_talla('tallas', $row['id']);
+                $talla_result = get_talla('tallas', $row['talla_id']);
                 $talla = ($talla_result) ? mysqli_fetch_assoc($talla_result)['talla'] : 'Desconocido';
 
-                $color_result = get_color('colores', $row['id']);
+                $color_result = get_color('colores', $row['color_id']);
                 $color = ($color_result) ? mysqli_fetch_assoc($color_result)['color'] : 'Desconocido';
 
                 $imagen_url = get_imagen_producto($row['id']);

@@ -21,7 +21,7 @@ include (SHARED_PATH . 'header.php');
                     <label for="" class="form-label">Nombre</label>
                     <input type="text" name="nombre" class="form-control">
                     <label for="" class="form-label">Precio</label>
-                    <input type="text" name="precio" class="form-control">
+                    <input type="number" name="precio" class="form-control">
                     <label for="" class="form-label">Talla</label>
                     <input type="text" name="talla" class="form-control">
                     <label for="" class="form-label">Color</label>

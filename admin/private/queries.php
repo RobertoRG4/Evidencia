@@ -35,10 +35,33 @@ function get_imagen_producto($producto_id)
     }
     return null;
 }
-function actualizar_producto($id, $nuevo_nombre)
+function actualizar_nombre_precio($id, $nuevo_nombre, $nuevo_precio)
 {
     global $db;
-    $sql = "UPDATE productos SET nombre = '$nuevo_nombre' WHERE id = '$id'";
+    $sql = "
+    UPDATE productos SET nombre = '$nuevo_nombre', precio = $nuevo_precio WHERE id = $id;";
+    return mysqli_query($db, $sql);
+}
+function actualizar_talla($id, $nueva_talla)
+{
+    global $db;
+    $sql = "
+    UPDATE tallas SET talla = '$nueva_talla' WHERE id = $id;";
+    return mysqli_query($db, $sql);
+}
+function actualizar_color($id, $nuevo_color)
+{
+    global $db;
+    $sql = "
+    UPDATE colores SET color = '$nuevo_color' WHERE id = $id;";
+    return mysqli_query($db, $sql);
+}
+
+function actualizar_imagen($id, $nueva_imagen)
+{
+    global $db;
+    $sql = "
+    UPDATE imagenes SET url = '$nueva_imagen' WHERE producto_id = $id;";
     return mysqli_query($db, $sql);
 }
 function eliminar_producto($id)

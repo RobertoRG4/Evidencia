@@ -2,6 +2,11 @@
 require ('../private/init.php');
 $id = $_GET['id'];
 $producto = mysqli_fetch_assoc(producto_por_id($id));
+$talla_result = get_talla('tallas', $id);
+$talla = ($talla_result) ? mysqli_fetch_assoc($talla_result)['talla'] : 'Desconocido';
+$imagen_url = get_imagen_producto($id);
+$color_result = get_color('colores', $id);
+$color = ($color_result) ? mysqli_fetch_assoc($color_result)['color'] : 'Desconocido';
 include (SHARED_PATH . 'header.php');
 ?>
 
@@ -25,6 +30,14 @@ include (SHARED_PATH . 'header.php');
                 <div class="mb-3">
                     <label for="" class="form-label">Nombre *</label>
                     <input type="text" name="nombre" class="form-control" value="<?= $producto['nombre'] ?>">
+                    <label for="" class="form-label">Precio *</label>
+                    <input type="number" name="precio" class="form-control" value="<?= $producto['precio'] ?>">
+                    <label for="" class="form-label">Talla</label>
+                    <input type="text" name="talla" class="form-control" value="<?= $talla ?>">
+                    <label for="" class="form-label">Color</label>
+                    <input type="text" name="color" class="form-control" value="<?= $color ?>">
+                    <label for="" class="form-label">Imagen</label>
+                    <input type="text" name="imagen" class="form-control" value="<?= $imagen_url ?>">
                 </div>
 
                 <div class="text-end">
