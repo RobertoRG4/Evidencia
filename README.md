@@ -1,5 +1,11 @@
 # Evidencia
 
+Acceder al panel de ADMIN
+
+```
+localhost/Evidencia/admin/index.php
+```
+
 Crear base de datos 'Round Wear' - 'Productos'
 
 ```sql
