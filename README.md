@@ -10,6 +10,8 @@ Crear base de datos 'Round Wear' - 'Productos'
 
 # Parte de Roberto Romero Guadarrama
 
+![Parte 2](/assets/parte2.png)
+
 ```sql
 -- Crear una base de datos llamada "RoundWear"
 CREATE DATABASE IF NOT EXISTS RoundWear;
