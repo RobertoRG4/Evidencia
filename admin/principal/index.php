@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-<h1>Principal</h1>
-=======
 <?php
 require ("../private/init.php");
 include (SHARED_PATH . 'header.php');
 ?>
-  <div class="container ">
+<div class="container ">
     <h1 class="p-4 text-white bg-info text-center">Inicio</h1>
     <div class="d-flex justify-content-between">
         <a class="btn btn-primary" href="../index.php" role="button">Regresar</a>
@@ -24,7 +21,7 @@ include (SHARED_PATH . 'header.php');
             <?php
             $titulos_y_textos = get_titulos_y_textos();
 
-            while($fila = mysqli_fetch_assoc($titulos_y_textos)) { ?>
+            while ($fila = mysqli_fetch_assoc($titulos_y_textos)) { ?>
                 <tr>
                     <td scope="row"><?= $fila['id'] ?></td>
                     <td scope="row"><?= $fila['titulo'] ?></td>
@@ -36,10 +33,7 @@ include (SHARED_PATH . 'header.php');
             <?php } ?>
         </tbody>
     </table>
-  </div>
+</div>
 </body>
+
 </html>
-
-
-
->>>>>>> 2847456 (admin)

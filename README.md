@@ -70,6 +70,8 @@ VALUES
 
 # Parte de Alán Andrés Pérez Lozano
 
+!(/assets/parte1.png)
+
 ```sql
 -- Crear la tabla de títulos
 CREATE TABLE titulos (
