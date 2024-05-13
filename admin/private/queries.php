@@ -93,4 +93,45 @@ function nuevo_producto($nombre, $precio, $talla, $color, $imagen, $id)
     INSERT INTO tallas(talla)Values('$talla');
     Insert Into imagenes(producto_id,url) VALUES($id,'$imagen');";
     return mysqli_query($db, $sql);
+
 }
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+function get_titulo($id)
+{
+    global $db;
+    $sql = "SELECT * FROM titulos WHERE id = $id";
+    return mysqli_query($db, $sql);
+}
+
+function get_texto($id)
+{
+    global $db;
+    $sql = "SELECT * FROM textos WHERE titulo_id = $id";
+    return mysqli_query($db, $sql);
+}
+
+function actualizar_titulo($id, $nuevo_titulo)
+{
+    global $db;
+    $sql = "UPDATE titulos SET titulo = '$nuevo_titulo' WHERE id = $id";
+    return mysqli_query($db, $sql);
+}
+
+function actualizar_texto($id, $nuevo_texto)
+{
+    global $db;
+    $sql = "UPDATE textos SET texto = '$nuevo_texto' WHERE id = $id";
+    return mysqli_query($db, $sql);
+}
+function get_titulos_y_textos()
+{
+    global $db;
+    $sql = "SELECT titulos.id, titulos.titulo, textos.texto 
+            FROM titulos 
+            LEFT JOIN textos ON titulos.id = textos.titulo_id";
+    return mysqli_query($db, $sql);
+}
+

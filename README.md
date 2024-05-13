@@ -7,6 +7,10 @@ localhost/Evidencia/admin/index.php
 ```
 
 Crear base de datos 'Round Wear' - 'Productos'
+<<<<<<< HEAD
+=======
+# Parte de Roberto Romero Guadarrama
+>>>>>>> 2847456 (admin)
 
 ```sql
 -- Crear una base de datos llamada "RoundWear"
@@ -65,3 +69,39 @@ VALUES
     (3, 'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4cd8-ba1c-b1e9386c8540/c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/92899ed9-7f09-48f4-b566-600f02d6ffdd/calzado-air-jordan-1-mid-se-craft-5Sq1hK.png');
 
 ```
+<<<<<<< HEAD
+=======
+# Parte de Alán Andrés Pérez Lozano 
+```sql
+-- Crear la tabla de títulos
+CREATE TABLE titulos (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(50) NOT NULL
+);
+
+-- Crear la tabla de textos
+
+CREATE TABLE textos (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    titulo_id INT,
+    texto VARCHAR(255) NOT NULL,
+    FOREIGN KEY (titulo_id) REFERENCES titulos(id)
+);
+
+--Datos agregados para titulos
+
+INSERT INTO titulos (titulo) VALUES 
+('Bienvenid@ a Round Wear'),
+('Nuestros Productos'),
+('Contacto'),
+('nosotros');
+
+--Datos agregados para textos
+INSERT INTO textos (titulo_id, texto) VALUES 
+(1, 'Tu sitio de sneakers favorito. Aquí podra encontrar gran variedad de marcas y colaboraciones.'),
+(2, '¡Eleva tu estilo con nuestros sneakers exclusivos que fusionan moda y comodidad para que destaques en cada paso!'),
+(3, '¿Listo para dar el siguiente paso en tu viaje sneakerhead? ¡Contáctanos hoy mismo y déjanos ayudarte a encontrar el par perfecto que elevará tu estilo al siguiente nivel! ¡Estamos aquí para ti en cada paso del camino!'),
+(4, 'Descubre la esencia del estilo urbano en Round Wear! Somos apasionados por los sneakers y nos dedicamos a ofrecerte lo último en calzado urbano y deportivo. Explora nuestra colección única y eleva tu estilo con nosotros.');
+
+```
+>>>>>>> 2847456 (admin)
