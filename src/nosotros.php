@@ -6,7 +6,36 @@
 </head>
 
 <body>
-  <?php include './componets/navbar.php' ?>
+  <nav class="navbar navbar-expand-lg azul sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.php">
+        <img src="../assets/logo.png" alt="Logo" width="100" height="50" class="d-inline-block align-text-center" />
+        <h3 class="tituloPrincipal">Round Wear</h3>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item p-2">
+            <a class="nav-link active" href="../index.php">
+              <i class="fa-solid fa-house p-2"></i>Inicio</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link active" href="./productos.php"><i
+                class="fa-solid fa-basket-shopping p-2"></i>Productos</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link active" href=""><i class="fa-solid fa-users p-2"></i>Nosotros</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link active" href="./contactos.php"><i class="fa-solid fa-address-book p-2"></i>Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
   <main class="container">
     <h1>¿Quiénes somos?</h1>
     <div class="row">
@@ -14,27 +43,27 @@
         <div id="miParrafo" contentEditable="false">
           <p>
             <strong>Round Wear</strong> es una vibrante empresa dedicada a la confección y
-          diseño de zapatos modernos y cómodos, enfocados especialmente en
-          satisfacer las necesidades de los universitarios. Nuestra misión es
-          fusionar estilo y funcionalidad, ofreciendo calzado que no solo
-          refleje las últimas tendencias de la moda, sino que también brinde
-          el confort necesario para afrontar las largas jornadas
-          académicas.
+            diseño de zapatos modernos y cómodos, enfocados especialmente en
+            satisfacer las necesidades de los universitarios. Nuestra misión es
+            fusionar estilo y funcionalidad, ofreciendo calzado que no solo
+            refleje las últimas tendencias de la moda, sino que también brinde
+            el confort necesario para afrontar las largas jornadas
+            académicas.
           </p>
           <p>
-          Con un enfoque fresco y juvenil, los zapatos de Round Wear están
-          diseñados para destacar en cualquier campus universitario. Nos
-          inspiramos en la diversidad y la creatividad de la vida estudiantil,
-          creando modelos que se adaptan a diferentes estilos y
-          personalidades. Desde zapatillas deportivas con toques urbanos hasta
-          elegantes mocasines, nuestra colección abarca una amplia gama de
-          estilos para satisfacer los gustos variados de la comunidad
-          universitaria.
+            Con un enfoque fresco y juvenil, los zapatos de Round Wear están
+            diseñados para destacar en cualquier campus universitario. Nos
+            inspiramos en la diversidad y la creatividad de la vida estudiantil,
+            creando modelos que se adaptan a diferentes estilos y
+            personalidades. Desde zapatillas deportivas con toques urbanos hasta
+            elegantes mocasines, nuestra colección abarca una amplia gama de
+            estilos para satisfacer los gustos variados de la comunidad
+            universitaria.
           </p>
         </div>
         <div id="masInformacion" style="display: none;" contentEditable="false">
           <p>
-          La calidad es una prioridad para nosotros. Utilizamos
+            La calidad es una prioridad para nosotros. Utilizamos
             materiales duraderos y técnicas de fabricación de vanguardia para
             asegurar que cada par de zapatos Round Wear sea resistente y perdure
             a lo largo del exigente ritmo universitario. Además, nos esforzamos
@@ -42,7 +71,7 @@
             estén al alcance de todos los estudiantes.
           </p>
           <p>
-          En Round Wear, no solo
+            En Round Wear, no solo
             vendemos zapatos, sino que también promovemos un estilo de vida
             activo y dinámico. Creemos que la elección del calzado puede influir
             positivamente en la actitud y confianza de los jóvenes durante sus
@@ -54,7 +83,7 @@
         <button id="editarTexto" onclick="editarTexto()">Editar texto</button>
       </div>
       <div class="col-md-6">
-      <style>
+        <style>
           .azul {
             background-color: #dcedf5 !important;
           }
