@@ -106,3 +106,7 @@ INSERT INTO textos (titulo_id, texto) VALUES
 (4, 'Descubre la esencia del estilo urbano en Round Wear! Somos apasionados por los sneakers y nos dedicamos a ofrecerte lo último en calzado urbano y deportivo. Explora nuestra colección única y eleva tu estilo con nosotros.');
 
 ```
+
+# Parte de Jose Arturo Sanchez Perez
+
+![Parte 3](/assets/parte3.png)
